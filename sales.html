@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24area Library - المبيعات</title>
-        <link rel="stylesheet" href="assets/style/style.css">
-
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body id="sales-page">
 
@@ -13,7 +12,7 @@
         <div class="sidebar-logo"><h2>24area Library</h2></div>
         <nav id="sidebar-nav" class="sidebar-nav">
             <ul>
-                <li><a href="../main.html" class="nav-link">لوحة التحكم</a></li>
+                <li><a href="main.html" class="nav-link">لوحة التحكم</a></li>
                 <li><a href="students.html" class="nav-link">الطلاب</a></li>
                 <li><a href="sales.html" class="nav-link active">المبيعات</a></li>
                 <li><a href="reports.html" class="nav-link">التقارير</a></li>
@@ -21,7 +20,6 @@
                 <li><a href="settings.html" class="nav-link">الإعدادات</a></li>
             </ul>
         </nav>
-       
     </aside>
 
     <nav>
@@ -36,11 +34,9 @@
         </header>
 
         <main id="sales-content" class="main-content">
-
             <section id="create-sale-section" class="form-section">
                 <h2>إنشاء عملية بيع</h2>
-                <form id="create-sale-form" action="#" method="post">
-
+                <form id="create-sale-form">
                     <div class="form-group">
                         <label for="sale-department">القسم</label>
                         <select id="sale-department" name="department" required>
@@ -50,29 +46,24 @@
                             <option value="subscription">الاشتراكات</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-product">المنتج</label>
                         <select id="sale-product" name="product_id" required>
                             <option value="">-- اختر المنتج --</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-quantity">الكمية</label>
                         <input type="number" id="sale-quantity" name="quantity" min="1" value="1" required>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-unit-price">سعر الوحدة</label>
                         <input type="number" id="sale-unit-price" name="unit_price" step="0.01" min="0" required>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-total">الإجمالي</label>
                         <input type="number" id="sale-total" name="total" step="0.01" readonly>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-discount">الخصم</label>
                         <input type="number" id="sale-discount" name="discount" step="0.01" min="0" value="0">
@@ -81,7 +72,6 @@
                         <label for="sale-final-total">الإجمالي النهائي</label>
                         <input type="number" id="sale-final-total" name="final_total" step="0.01" readonly>
                     </div>
-
                     <div class="form-group">
                         <label for="sale-payment-method">طريقة الدفع</label>
                         <select id="sale-payment-method" name="payment_method" required>
@@ -91,12 +81,10 @@
                             <option value="wallet">محفظة إلكترونية</option>
                         </select>
                     </div>
-
                     <button type="submit" id="create-sale-btn" class="btn btn-primary">إنشاء عملية بيع</button>
                 </form>
             </section>
 
-            <!-- Recent Sales Table -->
             <section id="recent-sales-table-section" class="table-section">
                 <h2>أحدث المبيعات</h2>
                 <table id="recent-sales-table" class="data-table">
@@ -111,25 +99,20 @@
                             <th>التاريخ</th>
                         </tr>
                     </thead>
-                    <tbody><!-- صفوف المبيعات --></tbody>
+                    <tbody></tbody>
                 </table>
             </section>
-
         </main>
 
         <div id="main-wrapper" class="main-wrapper">
         <header id="topbar" class="topbar">
             <h1 class="page-title" id="stationery">القرطاسية</h1>
-            <div class="topbar-right">
-            </div>
         </header>
 
         <main id="stationery-content" class="main-content">
-
-            <!-- Add Product Form -->
             <section id="add-stationery-product-section" class="form-section">
                 <h2>إضافة منتج جديد</h2>
-                <form id="add-stationery-product-form" action="#" method="post">
+                <form id="add-stationery-product-form">
                     <div class="form-group">
                         <label for="stationery-product-name">اسم المنتج</label>
                         <input type="text" id="stationery-product-name" name="product_name" required>
@@ -156,51 +139,17 @@
                     <button type="submit" id="add-stationery-product-btn" class="btn btn-primary">إضافة منتج</button>
                 </form>
             </section>
-
-            <!-- Stationery Products Table -->
-            <section id="stationery-table-section" class="table-section">
-                <h2>قائمة منتجات القرطاسية</h2>
-                <table id="stationery-table" class="data-table">
-                    <thead>
-                        <tr>
-                            <th>اسم المنتج</th>
-                            <th>التصنيف</th>
-                            <th>السعر</th>
-                            <th>المخزون</th>
-                            <th>الحالة</th>
-                            <th>تعديل</th>
-                            <th>حذف</th>
-                        </tr>
-                    </thead>
-                    <tbody><!-- صفوف المنتجات --></tbody>
-                </table>
-            </section>
-
-            <!-- Sales Area -->
-            <section id="stationery-sales-area" class="sales-area">
-                <h2>قسم المبيعات - القرطاسية</h2>
-                <div id="stationery-sales-form-container">
-                    <!-- نموذج البيع السريع للقرطاسية -->
-                </div>
-            </section>
-
         </main>
 
-    </div>
-
-    </div>
-
-    <div id="main-wrapper" class="main-wrapper">
+        <div id="main-wrapper" class="main-wrapper">
         <header id="topbar" class="topbar">
             <h1 class="page-title" id="cafe">البوفيه</h1>
         </header>
 
         <main id="cafe-content" class="main-content">
-
-            <!-- Add Product Form -->
             <section id="add-cafe-product-section" class="form-section">
                 <h2>إضافة منتج جديد</h2>
-                <form id="add-cafe-product-form" action="#" method="post">
+                <form id="add-cafe-product-form">
                     <div class="form-group">
                         <label for="cafe-product-name">اسم المنتج</label>
                         <input type="text" id="cafe-product-name" name="product_name" required>
@@ -232,80 +181,27 @@
                     <button type="submit" id="add-cafe-product-btn" class="btn btn-primary">إضافة منتج</button>
                 </form>
             </section>
-            <!-- Food Section -->
-            <section id="cafe-food-section" class="table-section">
-                <h2>المأكولات</h2>
-                <table id="cafe-food-table" class="data-table">
-                    <thead>
-                        <tr>
-                            <th>اسم المنتج</th>
-                            <th>التصنيف</th>
-                            <th>السعر</th>
-                            <th>المخزون</th>
-                            <th>الحالة</th>
-                            <th>تعديل</th>
-                            <th>حذف</th>
-                        </tr>
-                    </thead>
-                    <tbody><!-- صفوف المأكولات --></tbody>
-                </table>
-            </section>
-
-            <!-- Hot Drinks Section -->
-            <section id="cafe-hot-drinks-section" class="table-section">
-                <h2>المشروبات الساخنة</h2>
-                <table id="cafe-hot-drinks-table" class="data-table">
-                    <thead>
-                        <tr>
-                            <th>اسم المنتج</th>
-                            <th>التصنيف</th>
-                            <th>السعر</th>
-                            <th>المخزون</th>
-                            <th>الحالة</th>
-                            <th>تعديل</th>
-                            <th>حذف</th>
-                        </tr>
-                    </thead>
-                    <tbody><!-- صفوف المشروبات الساخنة --></tbody>
-                </table>
-            </section>
-
-            <!-- Cold Drinks Section -->
-            <section id="cafe-cold-drinks-section" class="table-section">
-                <h2>المشروبات الباردة</h2>
-                <table id="cafe-cold-drinks-table" class="data-table">
-                    <thead>
-                        <tr>
-                            <th>اسم المنتج</th>
-                            <th>التصنيف</th>
-                            <th>السعر</th>
-                            <th>المخزون</th>
-                            <th>الحالة</th>
-                            <th>تعديل</th>
-                            <th>حذف</th>
-                        </tr>
-                    </thead>
-                    <tbody><!-- صفوف المشروبات الباردة --></tbody>
-                </table>
-            </section>
-
-            <!-- Sales Area -->
-            <section id="cafe-sales-area" class="sales-area">
-                <h2>قسم المبيعات - البوفيه</h2>
-                <div id="cafe-sales-form-container">
-                    <!-- نموذج البيع السريع للبوفيه -->
-                </div>
-            </section>
-
         </main>
+
     </div>
 
      <div class="sidebar-footer">
-            <a href="../index.html" id="logout-btn-sidebar" class="btn btn-logout">تسجيل الخروج</a>
+            <a href="index.html" id="logout-btn-sidebar" class="btn btn-logout">تسجيل الخروج</a>
         </div>
 
     <footer id="cafe-footer" class="footer">
             <p>&copy; 2026 24area Library</p>
         </footer>
+        
+    <script>
+        // منع خطأ 405 في كل النماذج
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('تمت العملية بنجاح! (واجهة تجريبية)');
+                form.reset();
+            });
+        });
+    </script>
 </body>
 </html>
