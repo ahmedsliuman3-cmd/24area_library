@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24area Library - الإعدادات</title>
+        <link rel="stylesheet" href="assets/style/style.css">
+
+</head>
+<body id="settings-page">
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-logo"><h2>24area Library</h2></div>
+        <nav id="sidebar-nav" class="sidebar-nav">
+            <ul>
+                <li><a href="../main.html" class="nav-link">لوحة التحكم</a></li>
+                <li><a href="students.html" class="nav-link">الطلاب</a></li>
+                <li><a href="sales.html" class="nav-link">المبيعات</a></li>
+                <li><a href="reports.html" class="nav-link">التقارير</a></li>
+                <li><a href="users.html" class="nav-link">المستخدمون</a></li>
+                <li><a href="settings.html" class="nav-link active">الإعدادات</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="main-wrapper" class="main-wrapper">
+        <header id="topbar" class="topbar">
+            <h1 class="page-title">الإعدادات</h1>
+        </header>
+
+        <main id="settings-content" class="main-content">
+
+            <!-- Language Settings -->
+            <section id="language-settings-section" class="settings-section">
+                <h2>إعدادات اللغة</h2>
+                <form id="language-settings-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="language-select">اللغة</label>
+                        <select id="language-select" name="language">
+                            <option value="ar" selected>العربية</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">حفظ</button>
+                </form>
+            </section>
+
+            <!-- Appearance Settings -->
+            <section id="appearance-settings-section" class="settings-section">
+                <h2>المظهر</h2>
+                <form id="appearance-settings-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="theme-select">وضع المظهر</label>
+                        <select id="theme-select" name="theme">
+                            <option value="light" selected>فاتح</option>
+                            <option value="dark">داكن</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">حفظ</button>
+                </form>
+            </section>
+
+            <!-- User Settings -->
+            <section id="user-settings-section" class="settings-section">
+                <h2>إعدادات المستخدم</h2>
+
+                <!-- Profile -->
+                <form id="profile-settings-form" action="#" method="post">
+                    <h3>الملف الشخصي</h3>
+                    <div class="form-group">
+                        <label for="profile-fullname">الاسم الكامل</label>
+                        <input type="text" id="profile-fullname" name="full_name">
+                       </div>
+                    <div class="form-group">
+                        <label for="profile-username">اسم المستخدم</label>
+                        <input type="text" id="profile-username" name="username">
+                    </div>
+                    <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                </form>
+
+                <!-- Change Password -->
+                <form id="change-password-form" action="#" method="post">
+                    <h3>تغيير كلمة المرور</h3>
+                    <div class="form-group">
+                        <label for="current-password">كلمة المرور الحالية</label>
+                        <input type="password" id="current-password" name="current_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">كلمة المرور الجديدة</label>
+                        <input type="password" id="new-password" name="new_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">تأكيد كلمة المرور الجديدة</label>
+                        <input type="password" id="confirm-new-password" name="confirm_new_password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">تغيير كلمة المرور</button>
+                </form>
+            </section>
+
+            <!-- Logout -->
+            <section id="logout-section" class="settings-section">
+                <a href="../index.html" id="logout-btn-settings" class="btn btn-danger">تسجيل الخروج</a>
+            </section>
+
+        </main>
+
+        <footer id="settings-footer" class="footer">
+            <p>&copy; 2026 24area Library</p>
+        </footer>
+    </div>
+
+</body>
+</html> 

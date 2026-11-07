@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24area Library - الطلاب</title>
+        <link rel="stylesheet" href="assets/style/style.css">
+
+</head>
+<body id="students-page">
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-logo">
+            <h2>24area Library</h2>
+        </div>
+        <nav id="sidebar-nav" class="sidebar-nav">
+            <ul>
+                <li><a href="../main.html" class="nav-link">لوحة التحكم</a></li>
+                <li><a href="students.html" class="nav-link active">الطلاب</a></li>
+                <li><a href="sales.html" class="nav-link">المبيعات</a></li>
+                <li><a href="reports.html" class="nav-link">التقارير</a></li>
+                <li><a href="users.html" class="nav-link">المستخدمون</a></li>
+                <li><a href="settings.html" class="nav-link">الإعدادات</a></li>
+            </ul>
+        </nav>
+       
+    </aside>
+
+    <nav>
+        <a href="#students">الطلاب</a>
+        <a href="#subscriptions">الاشتراكات</a>
+    </nav>
+
+    <div id="main-wrapper" class="main-wrapper">
+        <header id="topbar" class="topbar">
+            <h1 class="page-title" id="students">إدارة الطلاب</h1>
+        </header>
+
+        <main id="students-content" class="main-content">
+
+            <!-- Add Student Form -->
+            <section id="add-student-section" class="form-section">
+                <h2>إضافة طالب جديد</h2>
+                <form id="add-student-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="student-name">اسم الطالب</label>
+                        <input type="text" id="student-name" name="student_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-phone">رقم الهاتف</label>
+                        <input type="tel" id="student-phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-email">البريد الإلكتروني</label>
+                        <input type="email" id="student-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-reg-date">تاريخ التسجيل</label>
+                        <input type="date" id="student-reg-date" name="registration_date" required>
+                    </div>
+                    <button type="submit" id="add-student-btn" class="btn btn-primary">إضافة طالب</button>
+                </form>
+            </section>
+
+            <!-- Search & Filter -->
+            <section id="search-filter-section" class="search-filter-section">
+                <h2>بحث وتصفية</h2>
+                <form id="search-form" action="#" method="get">
+                    <div class="form-group">
+                        <label for="search-students">بحث</label>
+                        <input type="search" id="search-students" name="search" placeholder="ابحث عن طالب...">
+                    </div>
+                    <div class="form-group">
+                        <label for="filter-subscription-status">حالة الاشتراك</label>
+                        <select id="filter-subscription-status" name="subscription_status">
+                            <option value="">الكل</option>
+                            <option value="active">نشط</option>
+                            <option value="expired">منتهي</option>
+                            <option value="none">بدون اشتراك</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">تطبيق</button>
+                </form>
+            </section>
+
+            <!-- Students Table -->
+            <section id="students-table-section" class="table-section">
+                <h2>قائمة الطلاب</h2>
+                <table id="students-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID الطالب</th>
+                            <th>اسم الطالب</th>
+                            <th>رقم الهاتف</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>تاريخ التسجيل</th>
+                            <th>حالة الاشتراك</th>
+                            <th>تعديل</th>
+                            <th>حذف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- صفوف الطلاب تُضاف هنا لاحقًا -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <div id="main-wrapper" class="main-wrapper">
+        <header id="topbar" class="topbar">
+            <h1 class="page-title" id="subscriptions">إدارة الاشتراكات</h1>
+        </header>
+
+        <main id="subscriptions-content" class="main-content">
+
+            <!-- Add Subscription Form -->
+            <section id="add-subscription-section" class="form-section">
+                <h2>إضافة اشتراك جديد</h2>
+                <form id="add-subscription-form" action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="subscription-student">اختيار الطالب</label>
+                        <select id="subscription-student" name="student_id" required>
+                            <option value="">-- اختر الطالب --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscription-type">نوع الاشتراك</label>
+                        <select id="subscription-type" name="subscription_type" required>
+                            <option value="">-- اختر النوع --</option>
+                            <option value="day">يوم</option>
+                            <option value="week">أسبوع</option>
+                            <option value="month">شهر</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscription-start-date">تاريخ البداية</label>
+                        <input type="date" id="subscription-start-date" name="start_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscription-end-date">تاريخ النهاية</label>
+                        <input type="date" id="subscription-end-date" name="end_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscription-price">السعر</label>
+                        <input type="number" id="subscription-price" name="price" step="0.01" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subscription-status">الحالة</label>
+                        <select id="subscription-status" name="status" required>
+                            <option value="active">نشط</option>
+                            <option value="expired">منتهي</option>
+                            <option value="cancelled">ملغي</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="add-subscription-btn" class="btn btn-primary">
+                        إضافة اشتراك
+                    </button>
+                </form>
+            </section>
+
+            <!-- Subscriptions Table -->
+            <section id="subscriptions-table-section" class="table-section">
+                <h2>قائمة الاشتراكات</h2>
+                <table id="subscriptions-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID الاشتراك</th>
+                            <th>اسم الطالب</th>
+                            <th>نوع الاشتراك</th>
+                            <th>تاريخ البداية</th>
+                            <th>تاريخ النهاية</th>
+                            <th>السعر</th>
+                            <th>الحالة</th>
+                            <th>تعديل</th>
+                            <th>حذف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- صفوف الاشتراكات تُضاف هنا لاحقًا -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+     <div class="sidebar-footer">
+            <a href="../index.html" id="logout-btn-sidebar" class="btn btn-logout">تسجيل الخروج</a>
+        </div>
+        
+        <footer id="students-footer" class="footer">
+            <p>&copy; 2026 24area Library</p>
+        </footer>
+    </div>
+
+</body>
+</html>

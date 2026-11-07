@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24area Library - تسجيل الدخول</title>
+        <link rel="stylesheet" href="assets/style/style.css">
+
+</head>
+<body id="login-page">
+
+    <header id="login-header">
+        <div class="logo-container">
+            <img src="assets/img/photo_2026-11-07_16-58-40.jpg" alt="24area Library Logo" id="app-logo">
+            <h1 id="app-name">24area Library</h1>
+            <p id="app-tagline">نظام إدارة مكتبة قراءة عامة</p>
+        </div>
+    </header>
+
+    <main id="login-main">
+        <section id="login-section">
+            <h2 id="login-title">تسجيل الدخول</h2>
+
+            <form id="login-form" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="أدخل اسم المستخدم" 
+                        required 
+                        autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="أدخل كلمة المرور" 
+                        required 
+                        autocomplete="current-password">
+                    <button 
+                        type="button" 
+                        id="toggle-password-btn" 
+                        class="btn-toggle-password"
+                        aria-label="إظهار أو إخفاء كلمة المرور">
+                        إظهار / إخفاء
+                    </button>
+                </div>
+
+                <div id="login-error-message" class="error-message" role="alert" hidden>
+                    <!-- مكان رسالة الخطأ -->
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="login-btn" class="btn btn-primary">
+                        دخول
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="language-switch">
+                <button type="button" id="lang-switch-btn" class="btn btn-secondary">
+                    تغيير اللغة / Change Language
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="login-footer">
+        <p>&copy; 2026 24area Library. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
