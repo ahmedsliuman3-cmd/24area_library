@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24area Library - تسجيل الدخول</title>
-        <link rel="stylesheet" href="assets/style/style.css">
-
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body id="login-page">
 
@@ -21,7 +20,8 @@
         <section id="login-section">
             <h2 id="login-title">تسجيل الدخول</h2>
 
-            <form id="login-form" action="#" method="post">
+            <!-- تم حذف method="post" لمنع خطأ 405 -->
+            <form id="login-form">
 
                 <div class="form-group">
                     <label for="username">اسم المستخدم</label>
@@ -76,5 +76,36 @@
         <p>&copy; 2026 24area Library. جميع الحقوق محفوظة.</p>
     </footer>
 
+    <!-- كود JavaScript لمعالجة تسجيل الدخول -->
+    <script>
+        // إظهار وإخفاء كلمة المرور
+        document.getElementById('toggle-password-btn').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+
+        // معالجة تسجيل الدخول
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // منع إرسال النموذج للخادم (منع خطأ 405)
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('login-error-message');
+
+            // بيانات تجريبية (يمكنك تغييرها)
+            if (username === 'admin' && password === 'admin') {
+                // إذا كانت البيانات صحيحة، انتقل للوحة التحكم
+                window.location.href = 'main.html';
+            } else {
+                // إذا كانت البيانات خاطئة، أظهر رسالة الخطأ
+                errorDiv.hidden = false;
+                errorDiv.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة! (جرب admin / admin)';
+            }
+        });
+    </script>
 </body>
 </html>
